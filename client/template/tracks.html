@@ -1,0 +1,16 @@
+<template name="tracks">
+	<div class="ui inverted message">
+		This web app was created to experiment with a different (minimal-ish) music player UX I've always wanted to play around with.
+		<br>
+		In practice it's a bit cumbersome if you intend to browse music or don't intend to listen in a dark room with minimal app interaction (why not???).
+	</div>
+	<div class="ui five column stackable grid">
+		<div class="column"  ng-repeat="track in SoundManager.tracks">
+			<div class="ui fluid link card" ng-click="playTrack(track)">
+				<div class="small image">
+					<img src="[[track.data.artworkURL]]">
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

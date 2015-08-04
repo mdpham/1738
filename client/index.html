@@ -1,0 +1,12 @@
+<!-- If deploying with meteor, add debug option to prevent minification error -->
+<head>
+  <title>fetty</title>
+  <script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
+</head>
+
+<body>
+<div id="fetty" ng-controller="FettyController">
+	<meteor-include src="tracks"></meteor-include>
+	<meteor-include src="menu"></meteor-include>
+</div>
+</body>

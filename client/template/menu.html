@@ -1,0 +1,59 @@
+<template name="menu">
+<div class="ui bottom inverted sidebar ui inverted fluid segment">
+  <!-- NO TRACK -->
+  <div class="ui grid" ng-if="!currentTrack">
+    <div class="sixteen wide center aligned column">
+      Press 'f' key to toggle player
+    </div>
+  </div>
+  <!-- TRACK -->
+  <div class="ui stackable grid" ng-show="currentTrack">
+    <!-- Loading -->
+    <div class="ui dimmer menu-player-loading"><div class="ui loader"></div></div>
+
+    <!-- Track information -->
+    <div class="ten wide column">
+      <h1 class="ui big orange inverted header">
+        <span ng-bind="currentTrack.title"></span>
+      </h1>
+    </div>
+    <!-- Play/Pause -->
+    <div class="one wide column">
+      <button class="ui active fluid inverted compact orange icon button" ng-click="togglePlay()">
+        <i class="icon" ng-class="SoundManager.playState == 'play' ? 'pause' : 'play'"></i>
+      </button>
+    </div>
+    <!-- Next track -->
+    <div class="one wide column">
+      <button class="ui fluid basic inverted compact orange icon button" ng-click="playTrack(SoundManager.nextTrack())">
+        <i class="forward icon"></i>
+      </button>
+    </div>
+    <!-- Volume control -->
+    <div class="two wide column">
+      <div class="ui two fluid basic inverted compact orange icon buttons">
+        <button class="ui button" ng-click="SoundManager.deltaVolume(false)">
+          <i class="volume down icon"></i>
+        </button>
+        <button class="ui button" ng-click="SoundManager.deltaVolume(true)">
+          <i class="volume up icon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Playback -->
+    <div class="one wide column">
+      <button class="ui active fluid inverted compact orange icon button" ng-click="togglePlayback()">
+        <i class="icon" ng-class="SoundManager.playback"></i>
+      </button>
+    </div>
+    <!-- Soundcloud -->
+    <div class="one wide column">
+      <a href="https://soundcloud.com/" target="_blank">
+        <button class="ui fluid inverted compact orange icon button">
+          <i class="soundcloud icon"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+</template>
