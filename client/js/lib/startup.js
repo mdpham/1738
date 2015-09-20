@@ -1,7 +1,7 @@
 Meteor.startup(function(){
 	config = {
-		client_id: "2ac78168bf000e39b7e4b9b476994cf2",
-		// username: "xylo100", //user_id: 49699208git
+		client_id: "de30c3bc571c2f847651eaa8a38facb0",
+		// username: "xylo100", //user_id: 49699208
 		username: "ohwondermusic",
 		user_id: {
 			ow: "95824500",
@@ -11,7 +11,7 @@ Meteor.startup(function(){
 			base: "http://api.soundcloud.com",
 			tracks: "http://api.soundcloud.com/tracks/",
 			users: "http://api.soundcloud.com/users/",
-			credentials: "?client_id=2ac78168bf000e39b7e4b9b476994cf2"
+			credentials: "?client_id=de30c3bc571c2f847651eaa8a38facb0"
 		}
 	};
 

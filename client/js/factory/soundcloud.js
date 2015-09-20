@@ -12,7 +12,7 @@ fetty.factory("Soundcloud", ["$q", function($q){
 			base: "http://api.soundcloud.com",
 			tracks: "http://api.soundcloud.com/tracks/",
 			users: "http://api.soundcloud.com/users/",
-			credentials: "?client_id=9d3700f41a6e7c052108742a6d661971"
+			credentials: "?client_id=de30c3bc571c2f847651eaa8a38facb0"
 		};
 	};
 
@@ -39,7 +39,7 @@ fetty.factory("Soundcloud", ["$q", function($q){
 			//Create sound
 			soundManager.createSound({
 				id: "current",
-				url: track.stream_url + "?client_id=2ac78168bf000e39b7e4b9b476994cf2",
+				url: track.stream_url + "?client_id=de30c3bc571c2f847651eaa8a38facb0",
 				volume: 50,
 				ondataerror: function(){
 					console.log("DATAERROR");

@@ -1,7 +1,7 @@
  fetty.controller("FettyController", ["$scope", "$meteor", "Soundcloud", "SoundManager",
 	function($scope, $meteor, Soundcloud, SoundManager){
 		//FettyWap userID
-		var Soundcloud = new Soundcloud("2ac78168bf000e39b7e4b9b476994cf2", "35225382");
+		var Soundcloud = new Soundcloud("de30c3bc571c2f847651eaa8a38facb0", "35225382");
 		$scope.SoundManager = new SoundManager();
 
 		Soundcloud
